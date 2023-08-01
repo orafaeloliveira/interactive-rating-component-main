@@ -13,6 +13,10 @@
     padding: 0;
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body, html {
     height: 100%;
 }
@@ -37,6 +41,10 @@ body {
     box-sizing: border-box;
 }
 
+.card img {
+    box-sizing: initial;
+}
+
 .card form {
     display: flex;
     flex-direction: column;
@@ -54,7 +62,7 @@ body {
     color: var(--light-grey);
 }
 
-.card ul {
+.card div {
     display: flex;
     gap: 20px;
 }
@@ -74,4 +82,32 @@ input[type="submit"] {
     font-weight: 700;
     color: var(--white);
     letter-spacing: 2px;
+}
+
+.form-control {
+
+}
+
+label {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    background-color: var(--dark-blue);
+    border-radius: 50%;
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+    font: inherit;
+    width: 1.15em;
+    height: 1.15em;
+    border-radius: 50%;
+    display: none;
+}
+
+input[type="radio"]:checked + label {
+    background-color: aliceblue;
 }

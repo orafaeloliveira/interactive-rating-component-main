@@ -2,55 +2,39 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-  <title>Frontend Mentor | Interactive rating component</title>
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | Interactive rating component</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <main>
+        <section class="card">
+            <form>
+                <img class="rounded" src="./images/icon-star.svg" alt="star icon" height="16px" width="17px">
+                <h2>How did we do?</h2>
 
-  <!-- Rating state start -->
+                <p>
+                    Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!
+                </p>
 
-  <main>
-    <section class="card">
-      <form>
-        <img class="rounded" src="./images/icon-star.svg" alt="star icon" height="16px" width="17px">
-        <h2>How did we do?</h2>
-
-        <p>
-          Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!
-        </p>
-
-        <ul>
-          <li>
-            <input class="rounded" type="radio" name="rating" id="one">
-          </li>
-          <li>
-            <input class="rounded" type="radio" name="rating" id="two">
-          </li>
-          <li>
-            <input class="rounded" type="radio" name="rating" id="three">
-          </li>
-          <li>
-            <input class="rounded" type="radio" name="rating" id="four">
-          </li>
-          <li>
-            <input class="rounded" type="radio" name="rating" id="five">
-          </li>
-        </ul>
-
-        <input type="submit" value="submit">
-      </form>
-    </section>
-  </main>
-
+                <input type="radio" name="nota" id="1" value="1">
+                <label for="1">1</label>
+                <input type="radio" name="nota" id="2" value="2">
+                <label for="2">2</label>
+                
+                <input type="submit" value="submit">
+            </form>
+        </section>
+    </main>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
