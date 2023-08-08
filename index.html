@@ -17,19 +17,30 @@
 <body>
     <main>
         <section class="card">
-            <form>
-                <img class="rounded" src="./images/icon-star.svg" alt="star icon" height="16px" width="17px">
+            <img class="rounded" src="./images/icon-star.svg" alt="star icon" height="16px" width="17px">
+            <div class="card-text">
                 <h2>How did we do?</h2>
 
                 <p>
-                    Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!
+                Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!
                 </p>
+            </div>
+            <form>
+                <div class="rate-list">
+                    <input type="radio" name="rating" id="one" value="1">
+                    <label for="one">1</label>
 
-                <input type="radio" name="nota" id="1" value="1">
-                <label for="1">1</label>
-                <input type="radio" name="nota" id="2" value="2">
-                <label for="2">2</label>
-                
+                    <input type="radio" name="rating" id="two" value="2">
+                    <label for="two">2</label>
+                    
+                    <input type="radio" name="rating" id="three" value="3">
+                    <label for="three">3</label>
+                    
+                    <input type="radio" name="rating" id="four" value="4">
+                    <label for="four">4</label>
+                    <input type="radio" name="rating" id="five" value="5">
+                    <label for="five">5</label>
+                </div>
                 <input type="submit" value="submit">
             </form>
         </section>
