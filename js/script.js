@@ -1,12 +1,18 @@
 const form = document.querySelector("form")
-const card = document.querySelector("section.card")
-
 
 form.addEventListener("submit", (e) => {
-    //console.log(card)
-    const url = location.search
-
-    const content = card.innerHTML
-    console.log(content)
     e.preventDefault()
+    const card = document.querySelector("section.card")
+    card.style.textAlign = "center"
+    const image = document.getElementById("img")
+    image.classList.remove("rounded")
+    image.classList.add("high-img")
+    image.src = "./images/illustration-thank-you.svg"
+    const rateNote = document.createElement("p")
+    rateNote.innerText = `You selected`
+    image.appendChild(rateNote)
+
+
+    const url = location.search
+    
 })

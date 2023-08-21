@@ -13,12 +13,9 @@
     padding: 0;
 }
 
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
 body, html {
     height: 100%;
+    box-sizing: border-box;
 }
 
 li {
@@ -46,6 +43,13 @@ body {
 
 .card img {
     box-sizing: initial;
+}
+
+.high-img {
+    width: 168px;
+    height: 108px;
+    background-color: none;
+    margin: auto;
 }
 
 .card-text {
@@ -80,6 +84,11 @@ body {
 .rate-list  {
     display: flex;
     justify-content: space-between;
+}
+
+.rate-text {
+    display: inline-block;
+    background-color: var(--light-grey);
 }
 
 label {
