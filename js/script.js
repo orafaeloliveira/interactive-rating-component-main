@@ -1,66 +1,48 @@
-const form = document.querySelector("form")
+const form = document.querySelector("form");
 
 form.addEventListener("submit", (e) => {
-    
     // selecionando o cartão
-    const card = document.querySelector("section.card")
+    const card = document.querySelector("section.card");
     // alinhando texto ao centro
-    card.style.textAlign = "center"
+    card.style.textAlign = "center";
     // selecionando a div cabeçalho
-    const imageDiv = document.getElementById("card-head")
+    const cardHead = document.getElementById("card-head");
     // selecionando imagem
-    const image = document.getElementById("img")
-    image.classList.replace("rounded", "high-img")
+    const cardImage = document.getElementById("card-image");
+    cardImage.classList.replace("rounded", "high-img");
     // image.classList.remove("rounded")
     // image.classList.add("high-img")
     // trocando a imagem
-    image.style.marginTop = "20px"
-    image.src = "./images/illustration-thank-you.svg"
+    cardImage.style.marginTop = "20px";
+    cardImage.src = "./images/illustration-thank-you.svg";
 
-    const rateNote = document.createElement("p")
-    rateNote.id = "rate-text"
-    rateNote.classList.add("rate-text")
-    imageDiv.append(rateNote)
-    const radios = document.getElementsByName("rating")
-     
+    const existRateNote = document.getElementById("rate-note");
+
+    if (existRateNote) {
+        existRateNote.remove();
+    }
+
+    const rateNote = document.createElement("p");
+    rateNote.id = "rate-note";
+    rateNote.classList.add("rate-note");
+    cardHead.append(rateNote);
+    const radios = document.getElementsByName("rating");
+
     function searchCheck(radio) {
         if (radio.checked) {
-            const value = radio.value
-            rateNote.innerText = `You selected ${value} out of 5`
-            console.log(value)
+            const value = radio.value;
+            rateNote.innerText = `You selected ${value} out of 5`;
+            console.log(value);
         }
     }
 
-    radios.forEach(searchCheck)
-    
-    // const rateExist = document.querySelector("#rate-text")
+    radios.forEach(searchCheck);
 
-    // if (!rateExist) {
-    //     // criando paragrafo com a nota
-    //     const rateNote = document.createElement("p")
-    //     // add id rate-text
-    //     rateNote.id = "rate-text"
-    //     // add texto
-    //     rateNote.innerText = ""
-    //     // rateNote.innerText = `You selected 4 out of 5`
-    //     // adicionando ao fim da div-head
-    //     imageDiv.append(rateNote)
-    //     // adicionando classe rate-text
-    //     rateNote.classList.add("rate-text")
+    const textTitle = document.getElementById("card-title");
+    textTitle.innerText = "Thank you!";
+    const textParagraph = document.getElementById("card-paragraph");
+    textParagraph.innerText =
+        "We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!";
 
-    //     const radios = document.getElementsByName("rating")
-    
-    //     function searchCheck(radio) {
-    //         if (radio.checked) {
-    //             const value = radio.value
-    //             rateNote.innerText = `You selected ${value} out of 5`
-    //             console.log(value)
-    //         }
-    //     }
-
-    //     radios.forEach(searchCheck)
-  
-    // }
-
-    e.preventDefault()
-})
+    e.preventDefault();
+});
