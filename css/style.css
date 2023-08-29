@@ -32,7 +32,7 @@ body {
 }
 
 .card {
-    width: 410px;
+    max-width: 410px;
     background: linear-gradient(
         to bottom,
         hsl(212, 18%, 17%),
@@ -44,6 +44,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    margin: auto;
 }
 
 #card-image {
@@ -55,7 +56,8 @@ body {
     height: 108px;
     background-color: none;
     margin: auto;
-}
+    transition: .1s linear;
+} 
 
 #card-text {
     display: flex;
@@ -149,4 +151,17 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: var(--white);
     color: var(--orange);
+}
+
+@media (max-width: 450px) {
+    .card {
+        width: 90vw;
+    }
+    .rate-list {
+        flex-wrap: wrap;
+    }
+    label {
+        width: 42px;
+        height: 42px;
+    }
 }
