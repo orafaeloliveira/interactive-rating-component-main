@@ -3,21 +3,25 @@ const form = document.querySelector("form");
 form.addEventListener("submit", (e) => {
     // get the whole card
     const card = document.querySelector("section.card");
+    // get the card height
+    const cardHeight = card.scrollHeight
+    // and change before changing the content
+    card.style.height = `${cardHeight}px`
     // align-text: center
     card.style.textAlign = "center";
     // get card-head
     const cardHead = document.getElementById("card-head");
-    // get the image inside card-head
+    // get the images inside card-head
     const cardImageBefore = document.getElementById("card-image-before");
+    const cardImageAfter = document.getElementById("card-image-after");
     // change class from rounded to high-img
     // cardImage.classList.replace("rounded", "high-img");
     // add margin-top to it and change the image source
-    cardImageBefore.style.marginTop = "20px";
     // cardImage.src = "./images/illustration-thank-you.svg";
     cardImageBefore.style.display = "none"
-    const cardImageAfter = document.getElementById("card-image-after")
+    cardImageAfter.style.marginTop = "20px";
     cardImageAfter.style.display = "block"
-    cardImageAfter.style.margin = "auto"
+    cardImageAfter.style.margin = "20px auto auto auto"
 
     // save the rate-note element
     const existRateNote = document.getElementById("rate-note");
