@@ -8,12 +8,16 @@ form.addEventListener("submit", (e) => {
     // get card-head
     const cardHead = document.getElementById("card-head");
     // get the image inside card-head
-    const cardImage = document.getElementById("card-image");
+    const cardImageBefore = document.getElementById("card-image-before");
     // change class from rounded to high-img
-    cardImage.classList.replace("rounded", "high-img");
+    // cardImage.classList.replace("rounded", "high-img");
     // add margin-top to it and change the image source
-    cardImage.style.marginTop = "20px";
-    cardImage.src = "./images/illustration-thank-you.svg";
+    cardImageBefore.style.marginTop = "20px";
+    // cardImage.src = "./images/illustration-thank-you.svg";
+    cardImageBefore.style.display = "none"
+    const cardImageAfter = document.getElementById("card-image-after")
+    cardImageAfter.style.display = "block"
+    cardImageAfter.style.margin = "auto"
 
     // save the rate-note element
     const existRateNote = document.getElementById("rate-note");

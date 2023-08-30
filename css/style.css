@@ -47,17 +47,17 @@ body {
     margin: auto;
 }
 
-#card-image {
+#card-image-before {
     box-sizing: initial;
 }
 
-.high-img {
+/* .high-img {
     width: 168px;
     height: 108px;
     background-color: none;
     margin: auto;
-    transition: .1s linear;
-} 
+    transition: .3s;
+}  */
 
 #card-text {
     display: flex;
@@ -81,7 +81,7 @@ form {
     font-weight: 400;
     color: var(--light-grey);
     line-height: 24px;
-    max-width: 36ch;
+    max-width: 35ch;
 }
 
 .rounded {
@@ -156,12 +156,22 @@ input[type="submit"]:hover {
 @media (max-width: 450px) {
     .card {
         width: 90vw;
+        padding: 30px 20px 30px 20px;
+        gap: 25px
     }
     .rate-list {
         flex-wrap: wrap;
+    }
+    .rounded {
+        padding: 12px;
     }
     label {
         width: 42px;
         height: 42px;
     }
+}
+
+#card-image-after {
+    display: none;
+    transition: .1s;
 }
