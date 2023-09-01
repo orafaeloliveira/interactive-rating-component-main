@@ -73,7 +73,7 @@ form {
 #card-title {
     color: var(--white);
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 #card-text p {
