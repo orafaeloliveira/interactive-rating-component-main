@@ -5,21 +5,22 @@ form.addEventListener("submit", (e) => {
     const card = document.querySelector("section.card");
     // get the card height
     const cardHeight = card.scrollHeight
-    // and change before changing the content
+    // keeping previous height before changing the content
     card.style.height = `${cardHeight}px`
-    // align-text: center
+    // align the text to center
     card.style.textAlign = "center";
-    // get card-head
+    // getting card-head
     const cardHead = document.getElementById("card-head");
-    // get the images inside card-head
+    // getting the images inside card-head
     const cardImageBefore = document.getElementById("card-image-before");
     const cardImageAfter = document.getElementById("card-image-after");
-    // change class from rounded to high-img
+    
+    // before i tried to change the class from rounded to high-img and change the source
     // cardImage.classList.replace("rounded", "high-img");
-    // add margin-top to it and change the image source
     // cardImage.src = "./images/illustration-thank-you.svg";
+
+    // hiding the first image showing the second image and changing it margins
     cardImageBefore.style.display = "none"
-    cardImageAfter.style.marginTop = "20px";
     cardImageAfter.style.display = "block"
     cardImageAfter.style.margin = "20px auto auto auto"
 
@@ -46,7 +47,7 @@ form.addEventListener("submit", (e) => {
             rateNote.innerText = `You selected ${value} out of 5`;
         }
     }
-    // looping the radios
+    // forEach for the radios
     radios.forEach(searchCheck);
 
     // getting and changing the card-title and card-paragraph
@@ -54,6 +55,7 @@ form.addEventListener("submit", (e) => {
     cardTitle.innerText = "Thank you!";
     const textParagraph = document.getElementById("card-paragraph");
     textParagraph.innerText = "We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!";
+    // then removing the form
     form.remove()
     
     e.preventDefault();
