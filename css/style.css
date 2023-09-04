@@ -160,6 +160,9 @@ input[type="submit"]:hover {
         padding: 30px 20px 30px 20px;
         gap: 25px
     }
+    #card-title {
+        font-size: 25px;
+    }
     .rate-list {
         flex-wrap: wrap;
     }
