@@ -118,7 +118,7 @@ label {
 }
 
 input[type="radio"] {
-    display: none;
+    display: none;flex
 }
 
 input[type="radio"]:checked + label {

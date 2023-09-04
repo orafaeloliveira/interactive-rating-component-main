@@ -40,22 +40,30 @@ form.addEventListener("submit", (e) => {
     cardHead.append(rateNote);
     // saving the radio buttons
     const radios = document.getElementsByName("rating");
-    // function to search the radios values and get the value of radio checked
-    function searchCheck(radio) {
-        if (radio.checked) {
-            const value = radio.value;
+    // using a for loop to search the radios values and get the value of radio checked, has a better performance in comparison to forEach because we can use a break the loop when we found a element checked
+    for (let i = 0; i < radios.length; i++) {
+        if(radios[i].checked) {
+            const value = radios[i].value
             rateNote.innerText = `You selected ${value} out of 5`;
+            break
         }
     }
-    // forEach for the radios
-    radios.forEach(searchCheck);
+    // previous solution
+    // function searchCheck(radio) {
+    //     if (radio.checked) {
+    //         const value = radio.value;
+    //         rateNote.innerText = `You selected ${value} out of 5`;
+    //     }
+    // }
+    // // forEach for the radios
+    // radios.forEach(searchCheck);
 
     // getting and changing the card-title and card-paragraph
     const cardTitle = document.getElementById("card-title");
     cardTitle.innerText = "Thank you!";
     const textParagraph = document.getElementById("card-paragraph");
     textParagraph.innerText = "We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!";
-    // then removing the form
+    // remove the form
     form.remove()
     
     e.preventDefault();
