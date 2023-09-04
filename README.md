@@ -27,13 +27,13 @@ Users should be able to:
 ### Screenshot
 
 #### Desktop
-![Desktop Design](https://i.imgur.com/xj3vyxq.png)
-![Active Status](https://i.imgur.com/uHA0fVH.png)
-![Desktop Thank You](https://i.imgur.com/Ng99jCr.png)
+![Desktop Design](https://i.imgur.com/L6q2Y1l.png)
+![Active Status](https://i.imgur.com/4ox0DrR.png)
+![Desktop Thank You](https://i.imgur.com/943rJz5.png)
 
 #### Mobile
-![Mobile Design](https://i.imgur.com/FHlAt6F.png)
-![Mobile Thank You](https://i.imgur.com/Fh3y2CQ.png)
+![Mobile Design](https://i.imgur.com/1e2joQd.png)
+![Mobile Thank You](https://i.imgur.com/67QSUed.png)
 
 ### Links
 
